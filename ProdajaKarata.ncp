@@ -1,0 +1,534 @@
+<Project>
+  <Name>ProdajaKarata</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>ProdajaKarata</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Karta</Name>
+        <Access>Public</Access>
+        <Location left="448" top="45" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">int cena</Member>
+        <Member type="Field">private DateTime datum</Member>
+        <Member type="Property">public int Id { get; set; }</Member>
+        <Member type="Property">public int Cena { get; set; }</Member>
+        <Member type="Constructor">public Karta()</Member>
+        <Member type="Property">public DateTime Datum { get; set; }</Member>
+        <Member type="Destructor">~Karta()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Korisnik</Name>
+        <Access>Public</Access>
+        <Location left="274" top="358" />
+        <Size width="162" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string username</Member>
+        <Member type="Field">private string password</Member>
+        <Member type="Field">private string ime</Member>
+        <Member type="Field">private int prezime</Member>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private int uloga</Member>
+        <Member type="Property">public string Username { get; set; }</Member>
+        <Member type="Property">public string Password { get; set; }</Member>
+        <Member type="Property">public string Ime { get; set; }</Member>
+        <Member type="Property">public int Prezime { get; set; }</Member>
+        <Member type="Constructor">public Korisnik()</Member>
+        <Member type="Property">public int ID { get; set; }</Member>
+        <Member type="Property">public int Uloga { get; set; }</Member>
+        <Member type="Destructor">~Korisnik()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>KorisnickiServis</Name>
+        <Access>Public</Access>
+        <Location left="625" top="369" />
+        <Size width="162" height="366" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public string AddAdmin(Admin admin)</Member>
+        <Member type="Method">public string AddBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">public string AddGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">public string ChangeAdmin(Admin admin)</Member>
+        <Member type="Method">public void ChangeBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">public void ChangeGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">public string DeleteAdmin(Admin admin)</Member>
+        <Member type="Method">public string DeleteBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">public string DeleteGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">public void FindAdmin(LogInKorisnik korisnik)</Member>
+        <Member type="Method">public void FindBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">public void FindGledalac(LogInKorisnik korisnik)</Member>
+        <Member type="Method">public void GetAdmins()</Member>
+        <Member type="Method">public void GetKorisniks()</Member>
+        <Member type="Method">public void GetGledalacs()</Member>
+        <Member type="Method">public void LogOut(string username)</Member>
+        <Member type="Method">public void GetBiletarnica()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Biletarnica</Name>
+        <Access>Public</Access>
+        <Location left="986" top="45" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private string placanje</Member>
+        <Member type="Field">private string ime</Member>
+        <Member type="Constructor">public Biletarnica()</Member>
+        <Member type="Destructor">~Biletarnica()</Member>
+        <Member type="Property">public int ID { get; set; }</Member>
+        <Member type="Property">public string Placanje { get; set; }</Member>
+        <Member type="Property">public string Ime { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IService</Name>
+        <Access>Public</Access>
+        <Location left="1017" top="393" />
+        <Size width="162" height="350" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">string AddAdmin(Admin admin)</Member>
+        <Member type="Method">string AddBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">string AddGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">string ChangeAdmin(Admin admin)</Member>
+        <Member type="Method">string ChangeBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">string ChangeGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">string DeleteAdmin(Admin admin)</Member>
+        <Member type="Method">string DeleteBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">string DeleteGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">void FindAdmin(LogInKorisnik korisnik)</Member>
+        <Member type="Method">void FindBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">void FindGledalac(LogInKorisnik korisnik)</Member>
+        <Member type="Method">void GetAdmins()</Member>
+        <Member type="Method">void GetKorisniks()</Member>
+        <Member type="Method">void GetGledalacs()</Member>
+        <Member type="Method">void LogOut(string username)</Member>
+        <Member type="Method">void GetBiletarnica()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>Admin</Name>
+        <Access>Public</Access>
+        <Location left="69" top="802" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public string Username { get; set; }</Member>
+        <Member type="Property">public string Password { get; set; }</Member>
+        <Member type="Property">public string Ime { get; set; }</Member>
+        <Member type="Property">public string Prezime { get; set; }</Member>
+        <Member type="Property">public int NewProperty { get; set; }</Member>
+        <Member type="Property">public int Uloga { get; set; }</Member>
+        <Member type="Constructor">public Admin()</Member>
+        <Member type="Destructor">~Admin()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Gledalac</Name>
+        <Access>Public</Access>
+        <Location left="342" top="803" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public string Username { get; set; }</Member>
+        <Member type="Property">public string Password { get; set; }</Member>
+        <Member type="Property">public string Ime { get; set; }</Member>
+        <Member type="Property">public string Prezime { get; set; }</Member>
+        <Member type="Property">public int ID { get; set; }</Member>
+        <Member type="Property">public int Uloga { get; set; }</Member>
+        <Member type="Constructor">public Gledalac()</Member>
+        <Member type="Destructor">~Gledalac()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Common</Name>
+        <Access>Public</Access>
+        <Location left="10" top="1378" />
+        <Size width="162" height="451" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public string AddAdmin(Admin admin)</Member>
+        <Member type="Method">public string AddBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">public string AddGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">public string ChangeAdmin(Admin admin)</Member>
+        <Member type="Method">public string ChangeBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">public string ChangeGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">public string DeleteAdmin(Admin admin)</Member>
+        <Member type="Method">public string DeleteBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">public string DeleteGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">public Admin FindAdmin(LogInKorisnik korisnik)</Member>
+        <Member type="Method">public Biletarnica FindBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">public Gledalac FindGledalac(LogInKorisnik korisnik)</Member>
+        <Member type="Method">public List&lt;Admin&gt; GetAdmins()</Member>
+        <Member type="Method">public List&lt;Biletarnica&gt; GetBiletarnica()</Member>
+        <Member type="Method">public List&lt;Gledalac&gt; GetGledalacs()</Member>
+        <Member type="Method">public List&lt;Korisnik&gt; GetKorisniks()</Member>
+        <Member type="Method">public Admin LogInAdmin(LogInKorisnik korisnik)</Member>
+        <Member type="Method">public Gledalac LogInGledalac(LogInKorisnik korisnik)</Member>
+        <Member type="Method">public void LogOut(string username)</Member>
+        <Member type="Method">public string Undo()</Member>
+        <Member type="Method">public string Redo()</Member>
+        <Member type="Method">public string searchKorisnik(string type, string input)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>ICommand</Name>
+        <Access>Public</Access>
+        <Location left="983" top="803" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">string Execute(int id, IService service)</Member>
+        <Member type="Method">string Unexecute(int id, IService service)</Member>
+        <Member type="Method">string Execute1(int id, IService service)</Member>
+        <Member type="Method">string Unexecute1(int id, IService service)</Member>
+      </Entity>
+      <Entity type="Interface">
+        <Name>ICommand1</Name>
+        <Access>Public</Access>
+        <Location left="1434" top="1095" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">string Execute(int id, IService service)</Member>
+        <Member type="Method">string Unexecute(int id, IService service)</Member>
+        <Member type="Method">string Execute1(int id, IService service)</Member>
+        <Member type="Method">string Unexecute(int id, IService service)</Member>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Uloga</Name>
+        <Access>Public</Access>
+        <Location left="1121" top="1636" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>ADMIN</Value>
+        <Value>GLEDALAC</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Placanje</Name>
+        <Access>Public</Access>
+        <Location left="1121" top="1386" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>ONLINE</Value>
+        <Value>GOTOVINSKI</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>LogInKorisnik</Name>
+        <Access>Public</Access>
+        <Location left="568" top="867" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string username</Member>
+        <Member type="Field">private string password</Member>
+        <Member type="Property">public string Username { get; set; }</Member>
+        <Member type="Property">public string Password { get; set; }</Member>
+        <Member type="Constructor">public LogInKorisnik()</Member>
+        <Member type="Destructor">~LogInKorisnik()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InAdmin</Name>
+        <Access>Public</Access>
+        <Location left="1810" top="1600" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private IService service</Member>
+        <Member type="Constructor">public InAdmin()</Member>
+        <Member type="Destructor">~InAdmin()</Member>
+        <Member type="Method">public void Check()</Member>
+        <Member type="Method">public void CheckAdmin()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UndoRedo</Name>
+        <Access>Public</Access>
+        <Location left="1354" top="1972" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private int role</Member>
+        <Member type="Field">private IService service</Member>
+        <Member type="Constructor">public UndoRedo()</Member>
+        <Member type="Destructor">~UndoRedo()</Member>
+        <Member type="Method">public string Undo()</Member>
+        <Member type="Method">public string Redo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Predstava</Name>
+        <Access>Public</Access>
+        <Location left="180" top="1092" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private DateTime datum</Member>
+        <Member type="Field">private Biletarnica biletarnica</Member>
+        <Member type="Constructor">public Predstava()</Member>
+        <Member type="Destructor">~Predstava()</Member>
+        <Member type="Property">public int ID { get; set; }</Member>
+        <Member type="Property">public DateTime Datum { get; set; }</Member>
+        <Member type="Property">public Biletarnica Biletarnica { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>LogInOutKorisnik</Name>
+        <Access>Public</Access>
+        <Location left="661" top="1357" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public Admin LogInAdmin(LogInKorisnik korsinik, IService service)</Member>
+        <Member type="Method">public Gledalac LogInGledalac(LogInKorisnik korisnik, IService service)</Member>
+        <Member type="Method">public void Logout(string username, IService service)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>ICommon</Name>
+        <Access>Public</Access>
+        <Location left="395" top="1357" />
+        <Size width="162" height="435" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">string AddAdmin(Admin admin)</Member>
+        <Member type="Method">string AddBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">string AddGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">string ChangeAdmin(Admin admin)</Member>
+        <Member type="Method">string ChangeBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">string ChangeGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">string DeleteAdmin(Admin admin)</Member>
+        <Member type="Method">string DeleteBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">string DeleteGledalac(Gledalac gledalac)</Member>
+        <Member type="Method">string FindAdmin(LogInKorisnik korisnik)</Member>
+        <Member type="Method">string FindBiletarnica(Biletarnica biletarnica)</Member>
+        <Member type="Method">void FindGledalac(LogInKorisnik korisnik)</Member>
+        <Member type="Method">List&lt;Admin&gt; GetAdmins()</Member>
+        <Member type="Method">List&lt;Biletarnica&gt; GetBiletarnica()</Member>
+        <Member type="Method">List&lt;Gledalac&gt; GetGledalacs()</Member>
+        <Member type="Method">List&lt;Korisnik&gt; GetKorisniks()</Member>
+        <Member type="Method">Admin LogInAdmin(LogInKorisnik korisnik)</Member>
+        <Member type="Method">Gledalac LogInGledalac(LogInKorisnik korisnik)</Member>
+        <Member type="Method">void Logout(string username)</Member>
+        <Member type="Method">string Undo()</Member>
+        <Member type="Method">string Redo()</Member>
+        <Member type="Method">string searchKorisnik(string type, string input)</Member>
+      </Entity>
+      <Entity type="Comment">
+        <Text>Template
+</Text>
+        <Location left="380" top="1054" />
+        <Size width="160" height="75" />
+      </Entity>
+      <Entity type="Comment">
+        <Text>Facade
+</Text>
+        <Location left="594" top="1675" />
+        <Size width="160" height="75" />
+      </Entity>
+      <Entity type="Class">
+        <Name>AddPredstava</Name>
+        <Access>Public</Access>
+        <Location left="822" top="988" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Predstava predstava</Member>
+        <Member type="Constructor">public AddPredstava()</Member>
+        <Member type="Destructor">~AddPredstava()</Member>
+        <Member type="Method">public string Execute(int id, IService service)</Member>
+        <Member type="Method">public string Execute1(int id, IService service)</Member>
+        <Member type="Method">public string Unexecute(int id, IService service)</Member>
+        <Member type="Method">public string Unexecute1(int id, IService service)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CRUDKorisnik</Name>
+        <Access>Public</Access>
+        <Location left="865" top="1580" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public CRUDKorisnik()</Member>
+        <Member type="Destructor">~CRUDKorisnik()</Member>
+        <Member type="Method">public string CreateAdmin(Admin admin, IService service)</Member>
+        <Member type="Method">public string CreateGledalac(Gledalac gledalac, IService service)</Member>
+        <Member type="Method">public List&lt;Admin&gt; GetAllAdmins(IService service)</Member>
+        <Member type="Method">public List&lt;Gledalac&gt; GetGledalacs(IService service)</Member>
+        <Member type="Method">public string DeleteAdmin(Admin admin, IService service)</Member>
+        <Member type="Method">public string DeleteGledalac(Gledalac gledalac, IService service)</Member>
+        <Member type="Method">public string ChangeAdmin(Admin admin, IService service)</Member>
+        <Member type="Method">public string ChangeGledalac(Gledalac gledalac, IService service)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CRUDPredstava</Name>
+        <Access>Public</Access>
+        <Location left="637" top="1961" />
+        <Size width="162" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public UndoRedo ur</Member>
+        <Member type="Constructor">public CRUDPredstava()</Member>
+        <Member type="Destructor">~CRUDPredstava()</Member>
+        <Member type="Method">public string AddPredstavaAdmin(int adminId, IService service, Predstava predstava)</Member>
+        <Member type="Method">public List&lt;Gledalac&gt; GetGledalacs(IService service)</Member>
+        <Member type="Method">public string DeletePredstava(Korisnik korisnik, Predstava predstava, IService service)</Member>
+        <Member type="Method">public List&lt;Predstava&gt; GetPredstave(Admin admin, IService service)</Member>
+        <Member type="Method">public List&lt;Predstava&gt; GetPredstave(Gledalac gledalac, IService service)</Member>
+        <Member type="Method">public string AddPredstavaGledalac(int gledalacId, IService service, Predstava predstava)</Member>
+        <Member type="Method">public string Redo()</Member>
+        <Member type="Method">public string Undo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DeletePredstava</Name>
+        <Access>Public</Access>
+        <Location left="1137" top="1139" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Predstava predstava</Member>
+        <Member type="Constructor">public DeletePredstava()</Member>
+        <Member type="Destructor">~DeletePredstava()</Member>
+        <Member type="Method">public string Execute(int id, IService service)</Member>
+        <Member type="Method">public string Execute1(int id, IService service)</Member>
+        <Member type="Method">public string Unexecute(int id, IService service)</Member>
+        <Member type="Method">public string Unexecute1(int id, IService service)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Comment">
+        <Text>Command
+</Text>
+        <Location left="1017" top="1054" />
+        <Size width="160" height="75" />
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>0..1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="2" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="2" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Realization" first="2" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>193</X>
+          <Y>603</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="7" second="17">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="17" second="16">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndRole>LogInOut</EndRole>
+      </Relationship>
+      <Relationship type="Association" first="15" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndRole>admin</EndRole>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="15" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>317</X>
+          <Y>912</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndRole>gledalac</EndRole>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Realization" first="20" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="23" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="22" second="14">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>758</X>
+          <Y>1936</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="20" second="15">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="23" second="15">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="17" second="22">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="17" second="21">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>840</X>
+          <Y>1652</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
